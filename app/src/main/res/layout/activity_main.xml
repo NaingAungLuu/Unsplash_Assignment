@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp"
+        android:background="@android:color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="0dp"
+            app:layout_scrollFlags="scroll"
+            >
+
+            <ImageButton
+                android:id="@+id/btnOpenNav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_margin="@dimen/margin_medium"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_menu"
+                android:tint="@android:color/black" />
+
+            <TextView
+                android:id="@+id/tvAppTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnOpenNav"
+                android:layout_marginLeft="@dimen/margin_medium_2x"
+                android:layout_marginTop="@dimen/margin_medium_3x"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Unsplash"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/textsize_large" />
+
+            <TextView
+                android:id="@+id/tvAppSlogan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvAppTitle"
+                android:layout_alignLeft="@id/tvAppTitle"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginBottom="@dimen/margin_medium_2x"
+                android:text="Beautiful, free photos."
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size_medium" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvAppSlogan"
+                android:layout_marginLeft="@dimen/margin_medium_2x"
+                android:layout_marginRight="@dimen/margin_medium_2x"
+                android:layout_marginBottom="@dimen/margin_medium_2x"
+                android:hint="Search Photos"
+               android:padding="@dimen/margin_medium"
+                android:background="@drawable/bg_edit_text"
+                android:textSize="@dimen/text_size_medium" />
+
+
+        </RelativeLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPhotos"
+        android:paddingLeft="@dimen/margin_small"
+        android:paddingRight="@dimen/margin_small"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
