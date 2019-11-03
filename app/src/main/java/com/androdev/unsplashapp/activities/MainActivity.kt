@@ -94,7 +94,7 @@ class MainActivity : BaseActivity() , PhotoItemDelegate , PhotoListView{
             .subscribeOn(Schedulers.computation())
             .subscribe(
                 {
-
+                    showPhotos(it)
                 },
                 {
 
